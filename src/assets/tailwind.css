@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-h1{
-    color: blue;
+@tailwind color;
+.dark{
+    background-color: #232323;
+    color: #fff;
+}
+
+*{
+    font-size: 25px;
 }

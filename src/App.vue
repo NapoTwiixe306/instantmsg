@@ -1,16 +1,23 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <NavBar/>
+  <div class="dark">
+    <AccPage/>
+    <!-- <Chat/>
+    <LoginPage/> -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import NavBar from './components/NavBar.vue';
+// import LoginPage from './components/LoginPage.vue';
+import AccPage from './components/AccPage.vue';
+// import Chat from './components/ChatPage.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    NavBar
+    // LoginPage,
+    AccPage,
+    // Chat
   }
 }
 </script>
+
+<style src="./assets/tailwind.css"/>
