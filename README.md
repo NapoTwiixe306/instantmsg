@@ -1,4 +1,4 @@
-# instantmsg
+# chatify
 
 ## Project setup
 ```

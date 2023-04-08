@@ -7,8 +7,6 @@
         <li><router-link to="/" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Home</router-link> | </li>
         <li><router-link to="/chat" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Chat</router-link> | </li>
         <li><router-link to="/login" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Login</router-link></li>
-
-        
       </ul>
     </div>
 
@@ -46,17 +44,3 @@
       </div>
   </footer>
 </template>
-
-<style>
-    p{
-        font-size: 25px;
-    }
-
-
-    
-
-    .Home{
-        height: 100vh;
-    }
-</style>
-  
