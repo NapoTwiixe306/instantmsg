@@ -10,21 +10,29 @@
       </ul>
     </div>
 
-    <div class="flex items-center min-h-screen dark">
-  <div class="container max-w-md mx-auto transition duration-300 shadow-md hover:shadow-lg">
-    <div class="p-10 py-12 bg-neutral-700 rounded-xl">
-      <div class="mb-6">
-        <label class="inline-block mb-2 mr-4 font-bold text-white" for="name">Name</label>
-        <input type="text" class="px-4 py-2 bg-gray-100 border rounded outline-none w-96 focus:ring-2 focus:ring-indigo-400" placeholder="Your name" />
+    <div class="flex items-center justify-center h-screen">
+    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+      <h1 class="mb-4 text-3xl font-semibold text-center text-sky-800">Connexion</h1>
+      <form>
+        <div class="mb-4">
+          <label class="block mb-2 font-bold text-gray-700" for="username">Nom d'utilisateur :</label>
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Entrez votre nom d'utilisateur ici">
+        </div>
+        <div class="mb-6">
+          <label class="block mb-2 font-bold text-gray-700" for="password">Mot de passe :</label>
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Entrez votre mot de passe ici">
+          <div class="mt-2">
+            <a class="text-sm font-semibold text-blue-500 hover:text-blue-700" href="#">Mot de passe oublié ?</a>
+          </div>
+        </div>
+        <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="button">
+          Se connecter
+        </button>
+      </form>
+      <div class="mt-4">
+        <span class="text-sm text-gray-600">Vous n'avez pas de compte ?</span>
+        <a class="ml-1 text-sm font-semibold text-blue-500 hover:text-blue-700" href="#">Créer un compte</a>
       </div>
-      <div class="">
-        <label class="inline-block mb-2 mr-4 font-bold text-white" for="name">Email</label>
-        <input type="text" class="px-4 py-2 bg-gray-100 border rounded outline-none w-96 focus:ring-2 focus:ring-indigo-400" placeholder="@email" />
-      </div>
-      <span class="inline-block mt-4 text-sm text-blue-500 transition duration-200 cursor-pointer hover:text-indigo-600 hover:underline hover:cursor-pointer">forget password</span>
-      <button class="w-full py-3 mt-6 font-bold transition duration-300 bg-indigo-600 rounded-md text-indigo-50 hover:bg-indigo-500">LOGIN</button>
     </div>
   </div>
-</div>
-
 </template>

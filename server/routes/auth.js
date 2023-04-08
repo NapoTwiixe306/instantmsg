@@ -4,30 +4,30 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// Signup route
-router.post('/signup', async (req, res) => {
+// Route d'inscription
+router.post('/register', async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    // Check if user already exists
+    // Vérifier si l'utilisateur existe déjà
     let user = await User.findOne({ email });
     if (user) {
-      return res.status(400).json({ message: 'User already exists' });
+      return res.status(400).json({ message: 'L\'utilisateur existe déjà' });
     }
 
-    // Create new user
+    // Créer un nouvel utilisateur
     user = new User({
       name,
       email,
       password
     });
 
-    // Hash password and save user to database
+    // Hasher le mot de passe et sauvegarder l'utilisateur dans la base de données
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(password, salt);
     await user.save();
 
-    // Create JWT token
+    // Créer un jeton JWT
     const payload = {
       user: {
         id: user.id
@@ -38,28 +38,28 @@ router.post('/signup', async (req, res) => {
     res.json({ token });
   } catch (error) {
     console.error(error.message);
-    res.status(500).send('Server error');
+    res.status(500).send('Erreur serveur');
   }
 });
 
-// Login route
+// Route de connexion
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Check if user exists
+    // Vérifier si l'utilisateur existe
     let user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ message: 'Invalid credentials' });
+      return res.status(400).json({ message: 'Identifiants invalides' });
     }
 
-    // Check if password matches
+    // Vérifier si le mot de passe correspond
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ message: 'Invalid credentials' });
+      return res.status(400).json({ message: 'Identifiants invalides' });
     }
 
-    // Create JWT token
+    // Créer un jeton JWT
     const payload = {
       user: {
         id: user.id
@@ -70,7 +70,7 @@ router.post('/login', async (req, res) => {
     res.json({ token });
   } catch (error) {
     console.error(error.message);
-    res.status(500).send('Server error');
+    res.status(500).send('Erreur serveur');
   }
 });
 

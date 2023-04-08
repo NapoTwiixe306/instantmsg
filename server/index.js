@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth');
+const authRoutes = require('./routes/auth.js');
 require ('dotenv').config()
 
 
@@ -21,7 +21,7 @@ app.use('/auth', authRoutes);
 
 // Middleware pour gérer les erreurs 404
 app.use((req, res, next) => {
-  const error = new Error('Not found.');
+  const error = new Error('Bonsoir, Non.');
   error.status = 404;
   next(error);
 });
@@ -43,7 +43,7 @@ mongoose.connect(process.env.MONGO_URI, {
   }).then(() => {
     console.log('Connected to MongoDB');
   }).catch((error) => {
-    console.error(error);
+    console.error("erreur de la bdd", error);
   });
 // Démarrage du serveur
 const PORT = process.env.PORT || 3000;
