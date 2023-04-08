@@ -4,9 +4,10 @@
         <a href="#" class="text-2xl font-bold text-white">Chatify</a>
       </div>
       <ul class="flex justify-end space-x-4">
-        <li><a href="#" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Accueil</a></li>
-        <li><a href="#" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Login</a></li>
-        <li><a href="#" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Chat</a></li>
+        <li><router-link to="/" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Home</router-link></li>
+        <li><router-link to="/login" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Login</router-link></li>
+        <li><router-link to="/chat" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Chat</router-link></li>
+        
       </ul>
     </div>
 
