@@ -31,7 +31,7 @@
       </form>
       <div class="mt-4">
         <span class="text-sm text-gray-600">Vous n'avez pas de compte ?</span>
-        <a class="ml-1 text-sm font-semibold text-blue-500 hover:text-blue-700" href="#">Créer un compte</a>
+        <router-link to="/register" class="ml-1 text-sm font-semibold text-blue-500 hover:text-blue-700">Créer un compte</router-link>
       </div>
     </div>
   </div>
