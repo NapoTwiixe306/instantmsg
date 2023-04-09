@@ -35,4 +35,15 @@
       </div>
     </div>
   </div>
+
+  <footer class="py-2">
+      <div class="container mx-auto text-center">
+        <p class="text-sm text-white-600">
+          Copyright © Julien Milants |
+          <a href="https://github.com/NapoTwiixe306" target="_blank"><i class="ml-2 fab fa-github hover:text-sky-500"></i></a>
+          <a href="https://gitlab.com/NapoTwiixe306" target="_blank"><i class="ml-2 fab fa-gitlab hover:text-sky-500"></i></a>
+          <a href="https://instagram.com/julien.mlnts" target="_blank"><i class="ml-2 fab fa-instagram hover:text-sky-500"></i></a>
+        </p>
+      </div>
+  </footer>
 </template>
