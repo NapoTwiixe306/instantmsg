@@ -1,12 +1,12 @@
 <template>
     <div class="flex items-center justify-between px-6 py-4 navbar bg-sky-800">
       <div class="logo">
-        <a href="#" class="text-2xl font-bold text-white">Chatify</a>
+        <router-link class="text-2xl font-bold text-white" to="/">Chatify</router-link>
       </div>
       <ul class="flex justify-end space-x-4">
         <li><router-link to="/" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Home</router-link> | </li>
         <li><router-link to="/chat" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Chat</router-link> | </li>
-        <li><router-link to="/login" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Login</router-link></li>
+        <li><router-link to="/register" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Register</router-link></li>
       </ul>
     </div>
 
