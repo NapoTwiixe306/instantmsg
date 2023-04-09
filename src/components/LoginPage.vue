@@ -16,11 +16,11 @@
       <form>
         <div class="mb-4">
           <label class="block mb-2 font-bold text-gray-700" for="username">Nom d'utilisateur :</label>
-          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Entrez votre nom d'utilisateur ici">
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Entrez votre nom d'utilisateur ici" required>
         </div>
         <div class="mb-6">
           <label class="block mb-2 font-bold text-gray-700" for="password">Mot de passe :</label>
-          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Entrez votre mot de passe ici">
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Entrez votre mot de passe ici" required>
           <div class="mt-2">
             <a class="text-sm font-semibold text-blue-500 hover:text-blue-700" href="#">Mot de passe oublié ?</a>
           </div>
