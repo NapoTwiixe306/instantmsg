@@ -66,7 +66,7 @@
           });
           
           console.log(response.data, "gg tu es log")
-          this.$router.push('/success');
+          this.$router.push('/chat');
         } catch (error) {
           console.log(error.response.data)
           alert('Nom utilisateur ou mdp incorrect')
