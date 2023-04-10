@@ -28,7 +28,7 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   try {
     // Recherche de l'utilisateur dans la base de données par email
-    const user = await User.findOne({ email: req.body.email });
+    const user = await User.findOne({ name: req.body.name });
     if (!user) {
       return res.status(401).json({ message: 'Authentication failed.' });
     }
