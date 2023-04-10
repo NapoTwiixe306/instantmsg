@@ -19,12 +19,12 @@
   </div>
 
   <div class="flex items-center justify-center h-screen">
-    <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+    <div class="w-full max-w-md p-5 bg-white border border-red-500 rounded-lg shadow-md">
       <h1 class="mb-4 text-3xl font-semibold text-center text-sky-800">Créer un compte</h1>
       <form @submit.prevent="submitForm">
         <div class="mb-4">
-          <label class="block mb-2 font-bold text-gray-700" for="username">Nom d'utilisateur :</label>
-          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Entrez votre nom d'utilisateur ici" v-model="username" required>
+          <label class="block mb-2 font-bold text-gray-700" for="name">Nom d'utilisateur :</label>
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Entrez votre nom d'utilisateur ici" v-model="name" required>
         </div>
         <div class="mb-4">
           <label class="block mb-2 font-bold text-gray-700" for="email">Email :</label>
@@ -58,24 +58,30 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
-      username: '',
+      name: '',
       email: '',
       password: '',
     }
   },
   methods: {
-    submitForm() {
-      // Récupération des valeurs entrées dans le formulaire
-      const username = this.username
-      const email = this.email
-      const password = this.password
-      
-      // Affichage d'une alerte avec les informations saisies
-      alert(`Nom d'utilisateur : ${username}\nEmail : ${email}\nMot de passe : ${password}`)
+  async submitForm() {
+    try {
+      const response = await axios.post('http://localhost:3000/auth/register', {
+        name: this.name,
+        email: this.email,
+        password: this.password
+      });
+      console.log(response.data);
+      // Afficher un message de succès ou rediriger l'utilisateur vers une autre page
+    } catch (error) {
+      console.log(error.response.data);
+      // Afficher un message d'erreur
     }
   }
+}
 }
 </script>
