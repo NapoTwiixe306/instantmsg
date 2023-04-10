@@ -74,4 +74,11 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Route de déconnexion
+router.post('/logout', (req, res) => {
+  res.clearCookie('token'); // Supprimer le cookie contenant le jeton JWT
+  res.send('Déconnexion réussie');
+});
+
+
 module.exports = router;

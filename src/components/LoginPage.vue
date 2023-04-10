@@ -63,10 +63,10 @@
           const response = await axios.post('http://localhost:3000/auth/login', {
             name: this.name,
             password: this.password
-
           });
           
           console.log(response.data, "gg tu es log")
+          this.$router.push('/success');
         } catch (error) {
           console.log(error.response.data)
           alert('Nom utilisateur ou mdp incorrect')
