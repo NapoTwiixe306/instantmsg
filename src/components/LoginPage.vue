@@ -49,29 +49,31 @@
 </template>
 
 <script lang="js">
-  import axios from 'axios'
-  export default {
-    data() {
-      return {
-        name: '',
-        password: ''
-      }
-    },
-    methods: {
-      async submitForm(){
-        try {
-          const response = await axios.post('http://localhost:3000/auth/login', {
-            name: this.name,
-            password: this.password
-          });
-          
-          console.log(response.data, "gg tu es log")
-          this.$router.push('/chat');
-        } catch (error) {
-          console.log(error.response.data)
-          alert('Nom utilisateur ou mdp incorrect')
-        }
+import axios from 'axios'
+export default {
+  data() {
+    return {
+      name: '',
+      password: ''
+    }
+  },
+  methods: {
+    async submitForm() {
+      try {
+        const response = await axios.post('http://localhost:3000/auth/login', {
+          name: this.name,
+          password: this.password
+        });
+
+        localStorage.setItem('token', response.data.token); // stocker le token dans le localstorage
+        console.log(response.data, "gg tu es log")
+        this.$router.push('/chat');
+      } catch (error) {
+        console.log(error.response.data)
+        alert('Nom utilisateur ou mdp incorrect')
       }
     }
   }
+}
+
 </script>

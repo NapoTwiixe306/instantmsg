@@ -42,15 +42,20 @@ const login = async (req, res) => {
     // Création d'un jeton JWT
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     
-    res.status(200).json({ token });
+    // Envoi du jeton JWT dans un cookie HTTP-only
+    res.cookie('token', token, { httpOnly: true });
+    
+    res.status(200).json({ message: 'Authentication successful.' });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
 
+// Fonction pour déconnecter l'utilisateur
 const logout = (req, res) => {
-  res.clearCookie('token');
-  res.redirect('/login');
+  localStorage.removeItem('token'); // Supprimer le jeton JWT du localstorage
+  res.clearCookie('token'); // Supprimer le cookie contenant le jeton JWT
+  res.redirect('/'); // Rediriger vers la page d'accueil
 };
 
 module.exports = { register, login, logout };

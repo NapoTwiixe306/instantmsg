@@ -30,10 +30,14 @@ router.post('/register', async (req, res) => {
     // Créer un jeton JWT
     const payload = {
       user: {
-        id: user.id
+        id: user.id,
+        name: user.name
       }
     };
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 3600 });
+
+    // Sauvegarder le jeton JWT dans le localStorage
+    localStorage.setItem('token', token);
 
     res.json({ token });
   } catch (error) {
@@ -62,10 +66,13 @@ router.post('/login', async (req, res) => {
     // Créer un jeton JWT
     const payload = {
       user: {
-        id: user.id
+        id: user.id,
+        name: user.name
       }
     };
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 3600 });
+
+    // Sauvegarder le jeton JWT dans le localStorage
 
     res.json({ token });
   } catch (error) {
@@ -74,11 +81,11 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Route de déconnexion
 router.post('/logout', (req, res) => {
   res.clearCookie('token'); // Supprimer le cookie contenant le jeton JWT
-  res.send('Déconnexion réussie');
+  res.status(200).send({ message: 'Déconnexion réussie' }); // Renvoyer une réponse avec un message
 });
+
 
 
 module.exports = router;
