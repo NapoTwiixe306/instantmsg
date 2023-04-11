@@ -1,8 +1,15 @@
 <template>
+  <div class="flex items-center justify-between px-6 py-4 navbar bg-sky-800">
+    <div class="logo">
+      <router-link class="text-2xl font-bold text-white" to="/">Chatify</router-link>
+    </div>
+    <ul class="flex justify-end space-x-4">
+      <li><router-link to="/" class="p-3 text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Home</router-link> | </li>
+      <li><button v-if="isLoggedIn" @click="logout" class="text-white transition duration-300 hover:bg-cyan-600 rounded-2xl">Déconnexion</button></li>
+    </ul>
+  </div>
   <div class="h-screen dark">
-    <!-- Afficher le bouton de déconnexion si l'utilisateur est connecté -->
     <h1>hello world</h1>
-    <button v-if="isLoggedIn" @click="logout">Déconnexion</button>
   </div>
 </template>
 
@@ -12,7 +19,8 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      isLoggedIn: localStorage.getItem('token') != null, // Vérifier si le token est présent dans le localstorage
+      isLoggedIn: localStorage.getItem('token') != null, // Vérifier si le token est présent dans le localstorage,
+      name: null
     };
   },
   methods: {
@@ -26,6 +34,6 @@ export default {
         console.log(error);
       }
     },
-  },
+  }
 };
 </script>
