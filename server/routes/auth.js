@@ -37,7 +37,7 @@ router.post('/register', async (req, res) => {
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 3600 });
 
     // Sauvegarder le jeton JWT dans le localStorage
-    localStorage.setItem('token', token);
+    // localStorage.setItem('token', token);
 
     res.json({ token });
   } catch (error) {
