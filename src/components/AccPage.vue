@@ -12,7 +12,7 @@
     </div>
 
     <div class="flex flex-col items-center h-screen mt-10">
-        <h1 class="text-3xl text-center">Présentation du projet</h1>
+        <h1 class="text-3xl text-center">Présentation du projet.</h1>
         <div class="mt-4 text-center">
           <p>Chatify, est une messagerie instantanée, utilisant les WebSockets</p>
         </div>
