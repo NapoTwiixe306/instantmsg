@@ -24,15 +24,15 @@
       <form @submit.prevent="submitForm">
         <div class="mb-4">
           <label class="block mb-2 font-bold text-gray-700" for="name">Nom d'utilisateur :</label>
-          <input class="w-full px-3 py-2 leading-tight text-gray-700 bg-gray-700 border-none rounded appearance-none focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Entrez votre nom d'utilisateur ici" v-model="name" required>
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 bg-gray-500 border-none rounded appearance-none focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Entrez votre nom d'utilisateur ici" v-model="name" required>
         </div>
         <div class="mb-4">
           <label class="block mb-2 font-bold text-gray-700" for="email">Email :</label>
-          <input class="w-full px-3 py-2 leading-tight text-gray-700 bg-gray-700 border-none rounded appearance-none focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Entrez votre adresse email ici" v-model="email" required>
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 bg-gray-500 border-none rounded appearance-none focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Entrez votre adresse email ici" v-model="email" required>
         </div>
         <div class="mb-6">
           <label class="block mb-2 font-bold text-gray-700" for="password">Mot de passe :</label>
-          <input class="w-full px-3 py-2 leading-tight text-gray-700 bg-gray-700 border-none rounded appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Entrez votre mot de passe ici" v-model="password" required>
+          <input class="w-full px-3 py-2 leading-tight text-gray-700 bg-gray-500 border-none rounded appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Entrez votre mot de passe ici" v-model="password" required>
         </div>
         <button class="px-4 py-2 font-bold text-white transition bg-blue-500 rounded duration 300 hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="submit">
           Créer un compte
