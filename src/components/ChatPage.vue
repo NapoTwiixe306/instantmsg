@@ -61,6 +61,6 @@ export default {
     right: 15px;
     width: 95%;
     height: 90%;
-    background-color: rgba(175, 175, 175, 0.643);
+    background-color: rgba(214, 212, 212, 0.795);
 }
 </style>
