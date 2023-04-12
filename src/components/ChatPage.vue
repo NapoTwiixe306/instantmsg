@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-between px-6 py-4 navbar bg-sky-800">
+  <div class="flex items-center justify-between px-6 py-4 bg-gray-900 navbar">
   <div class="logo">
     <router-link class="text-2xl font-bold text-white" to="/">Chatify</router-link>
   </div>
@@ -61,6 +61,6 @@ export default {
     right: 15px;
     width: 95%;
     height: 90%;
-    background-color: rgba(214, 212, 212, 0.795);
+    background-color: rgba(86, 97, 124, 0.795);
 }
 </style>
