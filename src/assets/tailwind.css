@@ -3,11 +3,18 @@
 @tailwind utilities;
 
 @tailwind color;
-.dark{
-    background-color: #232323;
-    color: #fff;
-}
 
 *{
     font-size: 25px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+}
+.dark{
+    background-color: #232f45;
+    color: #fff;
 }
