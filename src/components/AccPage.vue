@@ -1,4 +1,5 @@
 <template>
+<div class="dark">
   <div class="flex items-center justify-between px-6 py-4 bg-gray-900 navbar">
     <div class="logo">
       <a href="#" class="text-2xl font-bold text-white">Chatify</a>
@@ -11,30 +12,20 @@
     </ul>
   </div>
 
-  <div class="flex flex-col items-center h-screen mt-10">
-    <h1 class="text-3xl text-center">Présentation du projet.</h1>
-    <div class="mt-4 text-center">
-      <p>Chatify, est une messagerie instantanée, utilisant les WebSockets</p>
-    </div>
+  <div class="w-full h-screen">
+    <h1 class="text-center relative top-[15px] text-3xl">Chatify, <span class="text-3xl text-gray-100">C'est quoi ?</span></h1>
+    <p class="text-center w-150 relative top-[15px]">Chatify, est une messagerie Instantanée, coder avec Vue.js, et TailwindCss, le back-end, est avec Node.js, les WebSockets, et Mongodb</p>
     <div class="flex">
-      <div class="w-1/2">
-        <p class="text-left text-lg font-normal w-[550px] relative top-[150px] left-[450px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste alias aut, quos minus quaerat. Reprehenderit molestiae placeat voluptatum? Magni dolore amet quia blanditiis aut. Tempore tempora illum ipsa error.</p>
-      </div>
-      <div class="w-1/2">
-        <img src="../assets/img/img.jpg" alt="" class="float-right relative top-[130px] left-[500px] rounded-2xl w-450">
-      </div>
-      <!-- Image est text2 -->
-      <div class="w-1/2">
-        <p class="text-left text-lg font-normal w-[550px] relative top-[530px] left-[90px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste alias aut, quos minus quaerat. Reprehenderit molestiae placeat voluptatum? Magni dolore amet quia blanditiis aut. Tempore tempora illum ipsa error.</p>
-      </div>
-      <div class="w-1/2">
-        <img src="../assets/img/img2.jpg" alt="" class="float-left relative top-[550px] left-[-1000px] rounded-2xl w-450">
-      </div>
-    </div>
-
+      <img src="../assets/img/img.jpg" alt="" class="w-[450px] relative left-[350px] top-[100px] rounded-lg ">
+      <p class="w-[450px] relative top-[120px] left-[555px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum natus harum ad consectetur. Cum reiciendis odio, eos cupiditate tempora architecto totam facilis quam magni quasi laborum numquam. Libero, iste placeat!</p>
+    </div> 
+    <div class="flex">
+      <p class="w-[450px] relative top-[250px] left-[350px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum natus harum ad consectetur. Cum reiciendis odio, eos cupiditate tempora architecto totam facilis quam magni quasi laborum numquam. Libero, iste placeat!</p>
+      <img src="../assets/img/img.jpg" alt="" class="w-[450px] relative left-[555px] top-[200px] rounded-lg ">
+    </div> 
   </div>
 
-    <footer class="py-2">
+  <footer class="py-2 relative top-[50px]">
       <div class="container mx-auto text-center">
         <p class="text-sm text-white-600">
           Copyright © Julien Milants |
@@ -44,4 +35,5 @@
         </p>
       </div>
   </footer>
+</div>
 </template>
