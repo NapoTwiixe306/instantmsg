@@ -1,6 +1,6 @@
 <template>
 <div class="dark">
-  <div class="flex items-center justify-between px-6 py-4 bg-gray-900 navbar">
+  <div class="flex items-center justify-between w-full px-6 py-4 bg-gray-900 navbar">
     <div class="logo">
       <a href="#" class="text-2xl font-bold text-white">Chatify</a>
     </div>

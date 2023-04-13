@@ -19,7 +19,7 @@
   </div>
 
   <div class="flex items-center justify-center h-screen">
-    <div class="w-full max-w-md p-5 bg-gray-400 border border-red-500 rounded-lg shadow-md">
+    <div class="w-full max-w-md p-5 bg-gray-400 border border-none rounded-lg shadow-md">
       <h1 class="mb-4 text-3xl font-semibold text-center text-sky-800">Créer un compte</h1>
       <form @submit.prevent="submitForm">
         <div class="mb-4">
